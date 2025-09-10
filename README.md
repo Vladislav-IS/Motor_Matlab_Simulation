@@ -21,11 +21,12 @@ The main idea of this project stage is to calculate statistical characteristics 
 associated with real and simulated signals using Bayesian optimization (Optuna).
 
 __Results:__
-- minimal MAE for means obtained for the noise constant `Noizz = 0.048`;
-- minimal MAE for STDs obtained for thr noise constant `Noizz = 19.779`.
+- minimal MAE for means was obtained for the noise constant `Noizz = 0.048`;
+- minimal MAE for STDs was obtained for the noise constant `Noizz = 19.779`.
 
 Spectra for the obtained `Noizz` values (phase 1) are shown below.
 
 <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/c7736aa1-bc78-49c3-9449-a74557293bec" />
 
 <img width="989" height="490" alt="image" src="https://github.com/user-attachments/assets/d7545c59-1424-468c-a516-a4976c691f02" />
+
