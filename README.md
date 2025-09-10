@@ -9,10 +9,10 @@ This repository is used for experiments with Simulink induction motor models.
 │   ├── engine_1/         # First motor dataset (see `dataset/engine_1/README.md`)
 │   └── engine_2/         # Second motor dataset (see `dataset/engine_2/README.md`)
 ├── training_configs/     # YAML files describing training parameters
-├── AC_motor_4.slx/       # Simulink induction motor model
-├── AIR_Series.pdf/       # Operation manual containing info about various AIR motors 
-├── Find_Best_Noizz.m/    # Matlab script for launching the simulation
-└── Model_Analysis.ipynb/ # IPython notebook for searching for the best noise constant
+├── AC_motor_4.slx        # Simulink induction motor model
+├── AIR_Series.pdf        # Operation manual containing info about various AIR motors 
+├── Find_Best_Noizz.m     # Matlab script for launching the simulation
+└── Model_Analysis.ipynb  # IPython notebook for searching for the best noise constant
 ```
 
 ## 1. Search for the best noise constant
