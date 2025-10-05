@@ -16,13 +16,13 @@ Lr = 0.414; % H - Rotor inductance
 
 %% Other parameters
 J = 0.0226; % kg/m^2 - Moment of inertia
-Tsimulation = 6000e-3+1000e-3; %s - total simulation time
+Tsimulation = 110000e-3+1000e-3; %s - total simulation time
 Tswrite = 0.24e-3; %414e-3; %s - data saving frequency
 save_time_init = 3; % start saving data after 2 seconds of simulation (steady-state)
 run_name = ['Noizz', num2str(Noizz), '_load100_']; % csv-files prefix
 
 %% Simulation
-out = sim('AC_motor_4');
+out = sim('AC_motor_5');
 idx = find(out.I_out_curr.time >= save_time_init, 1, 'first');
 data_time_nf = out.I_out_curr.time(idx:end)-1;
 data_current_nf_phA = out.I_out_curr.signals.values(idx:end,1);

@@ -8,3 +8,6 @@ best*
 *.zip
 Simulations
 processed_data
+no_fault*
+broken_bars*
+short_circuit*
