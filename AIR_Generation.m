@@ -24,11 +24,9 @@ for i = 1:height(data)
     mk = data{i, 11}; % M_start / M_n 
     Ikn = data{i, 12}; 
     Un_parts = strsplit(data{i, 4}{1}, '/');
-    for j = 1:length(Un_parts)
-        Un = str2double(Un_parts{j}); % rated voltage, V 
-        Vph = Un / sqrt(3);
-        for Vdc = [380, 460]
-            Run_Simulation;
-        end
+    Un = str2double(Un_parts{2}); % rated voltage, V
+    Vph = Un / sqrt(3);
+    for Vdc = [380, 460]
+        Run_Simulation;
     end
 end
