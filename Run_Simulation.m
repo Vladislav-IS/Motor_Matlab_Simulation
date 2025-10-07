@@ -14,20 +14,7 @@ end
 if ~exist(subPath_3, 'dir')
     mkdir(subPath_3);
 end
-myStruct = struct();
-myStruct.Un = Un;
-myStruct.Vdc = Vdc;
-myStruct.P = P;
-myStruct.Power = Power;
-myStruct.eta = eta;
-myStruct.nn = nn;
-myStruct.cosfi = cosfi;
-myStruct.mk = mk;
-myStruct.Ikn = Ikn;
-json_str = jsonencode(myStruct);
-fid = fopen(fullfile(subPath, 'config.json'), 'w');
-fprintf(fid, json_str);
-fclose(fid);
+
 err_file = fullfile(subPath, 'error.txt');
 
 try
@@ -37,6 +24,7 @@ catch err
     fprintf(err_file_id, [err.message, '\n']);
     fclose(err_file_id);
 end
+Save_Json_File;
 nturns_phase = round(Un / 4.44 / fb / kw / Bmax);
 for fscnturns = 2:nturns_phase
     try
