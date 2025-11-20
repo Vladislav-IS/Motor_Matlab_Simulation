@@ -6,7 +6,7 @@ slprj
 best*
 *.asv
 *.zip
-Simulations
+Simulations*
 processed_data
 no_fault*
 broken_bars*

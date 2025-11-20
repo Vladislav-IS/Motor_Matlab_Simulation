@@ -1,6 +1,5 @@
 myStruct = struct();
 myStruct.Un = Un;
-myStruct.Vdc = Vdc;
 myStruct.P = P;
 myStruct.Power = Power;
 myStruct.eta = eta;

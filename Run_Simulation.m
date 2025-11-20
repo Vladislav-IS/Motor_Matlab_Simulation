@@ -1,4 +1,4 @@
-subPath = fullfile(basePath, [motor_name, ' Un-', num2str(Un), ' Vdc-' num2str(Vdc)]);
+subPath = fullfile(basePath, [motor_name, ' Un-', num2str(Un)]);
 subPath_1 = fullfile(subPath, 'no_fault');
 subPath_2 = fullfile(subPath, 'short_circuit');
 subPath_3 = fullfile(subPath, 'broken_bars');
@@ -26,7 +26,7 @@ catch err
 end
 Save_Json_File;
 nturns_phase = round(Un / 4.44 / fb / kw / Bmax);
-for fscnturns = 2:nturns_phase
+for fscnturns = 1:5
     try
         Run_Short_Circuit_Simulation;
     catch err 
@@ -35,8 +35,9 @@ for fscnturns = 2:nturns_phase
         fclose(err_file_id);
     end
 end
-for Nbars = 3:28
-    max_nbroken = floor(Nbars/3);
+out_Nbars = Suggest_z2(Power / 1000, nn, P, fb);
+for Nbars = out_Nbars.candidates
+    max_nbroken = min(3, floor(Nbars/3));
     if max_nbroken >= Nbars/3
         continue;
     end
