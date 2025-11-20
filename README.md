@@ -15,6 +15,7 @@ This repository is used for experiments with Simulink induction motor models.
 ├── AIR_Series.csv                  # Tabular info about various AIR motors
 ├── AIR_Generation.m                # Matlab script for launching the grid simulation
 ├── Calculate_Basic.m               # Matlab script containing basic motor parameters calculations
+├── Save_Json_File.m                # Matlab script for saving JSON-file
 ├── Run_Simulation.m                # Matlab script for launching the single engine simulation
 ├── Run_Healthy_Simulation.m        # Matlab script for launching the simulation without faults
 ├── Run_Short_Circuit_Simulation.m  # Matlab script for launching the simulation with inter-turn short circuits
